@@ -1,0 +1,49 @@
+.footer-nav {
+
+}
+
+.footer-nav__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav__list-item {
+    margin: 0;
+    padding: 0;
+
+    & + & {
+        margin-left: 60px;
+    }
+}
+
+.footer-nav__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+    line-height: 1.875;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+.footer-nav__link--dropdown {
+    position: relative;
+    padding-right: 20px;
+    span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-60%);
+
+        svg {
+           fill: #b3b3b3; 
+        }
+    }
+
+    &:hover span svg {
+        fill: $blue;
+    }
+}

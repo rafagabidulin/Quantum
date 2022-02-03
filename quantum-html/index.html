@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/libs/owl-carousel/assets/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                QUANTUM
+            </div>
+            <form class="header__search" type="GET">
+                <div class="header__search-input-wrapper">
+                    <input class="header__search-input" type="text" placeholder="Search goods">
+                </div>
+                <div class="header__search-dropdown">
+
+                    <div data-select class="header-select">
+                        <div data-select-title class="header-select__title">Category</div>
+                        <div class="header-select__dropdown hidden">
+                            <div data-select-item="mobile" class="header-select__dropdown-item">Mobile</div>
+                            <div data-select-item="tablet" class="header-select__dropdown-item">Tablet</div>
+                            <div data-select-item="laptop" class="header-select__dropdown-item">Laptop</div>
+                        </div>
+                    </div>
+
+                     <select class="hidden" name="select" id="selectReal" value="none">
+                        <option value="none">Category</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="tablet">Tablet</option>
+                        <option value="laptop">Laptop</option>
+                    </select>
+                </div>
+
+                <div class="header__search-button-wrapper">
+                    <button class="header__search-button" type="submit">
+                        <img src="img/icons/search_icon.svg" alt="">
+                    </button>
+                </div> 
+            </form>
+            <div class="header__links">
+                <!-- Cart link -->
+                <a href="#" class="header-link header-link--notify">
+                    <span class="header-link__icon">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="21" 
+                            height="20" 
+                            viewBox="0 0 21 20"
+                            class="icon-svg">
+                                <g>
+                                        <path
+                                         d="M16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2c1.099 0 2-.9 2-2s-.901-2-2-2zM4.008 18c0 1.1.89 2 1.99 2 1.102 0 2-.9 2-2s-.898-2-2-2c-1.1 0-1.99.9-1.99 2zM14.55 9H7.53l-.13-.27L5.16 4h12.15zM3.27 0H0v2H2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C4 14.1 4.9 15 6 15h12v-2H6.42a.256.256 0 0 1-.25-.25l.03-.12L7.1 11h7.45c.75 0 1.409-.41 1.75-1.03l3.861-7.01-.16-.96H4.21z"/>
+                                </g>
+                        </svg>
+                    </span>
+                    <span class="header-link__text">2 Items</span>
+                </a>
+                 <!--// Cart link -->
+                  <!-- Wish List -->
+                <a href="#" class="header-link">
+                    <span class="header-link__icon">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="20" 
+                        height="19" 
+                        viewBox="0 0 20 19">
+                            
+                                <path 
+                                    d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/>
+                            
+                        </svg>
+                    </span>
+                    <span class="header-link__text">Wish List</span>
+                </a>
+                <!-- // Wish List -->
+                <!-- User List -->
+                <a href="#" class="header-link">
+                    <span class="header-link__icon">
+                        <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 16 16">
+                        
+                                <path d="M16 13v3H0v-3c0-2.66 5.33-4 8-4s8 1.34 8 4zm-4.002-9c0 2.21-1.789 4-3.998 4a3.997 3.997 0 0 1-4-4c0-2.21 1.788-4 4-4 2.21 0 3.998 1.79 3.998 4zm-10.1 9v1.1H14.1V13c0-.64-3.13-2.1-6.1-2.1-2.968 0-6.1 1.46-6.1 2.1zM5.9 4a2.101 2.101 0 0 0 4.202 0A2.101 2.101 0 0 0 5.9 4z"/>
+                        </svg>
+                    </span>
+                    <span class="header-link__text">Sing in</span>
+                </a>
+                <!-- User List -->
+            </div>
+        </div>
+        <div class="header__nav">
+            <nav class="header-nav">
+                <div class="header-nav__categories">
+                    <a class="header-mega-menu-link" href="#">
+                        <span class="header-mega-menu-link__icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12"><path fill="gray" d="M18 0v2H0V0zM0 5h18v2H0zm0 5h18v2H0z"/>
+                            </svg>
+                        </span>
+                        <span class="header-mega-menu-link__text">
+                            All Categories
+                        </span>
+                        
+                    </a>
+                </div>
+                <div class="header-nav__deals">
+
+                    <a href="#" class="header-nav__link"></a>
+
+                        <a href="#" class="header-nav__link">Super Deals</a>
+                        <a href="#" class="header-nav__link">Featured Brands</a>
+                        <a href="#" class="header-nav__link">Collections</a>
+                        <a href="#" class="header-nav__link">Bestselling</a>
+
+
+                </div>
+
+                <!--header-nav__select-->
+
+                <div class="header-nav__select">
+
+                  
+
+                    <!-- ITEM 1 -->
+                    <div class="header-nav__select-item">
+                        
+                    <!-- dropdown nav -->
+
+                        <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown__title">
+                            Help
+                        
+                        
+                            <div class="nav-dropdown__title-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5"><path fill="#b3b3b3" d="M3.998 5L8 2.5V.104L3.998 2.62 0 0v2.5z"/></svg>  
+                            </div>
+                        </a>
+                        <div class="nav-dropdown__dropdown">
+                            <a href="#" class="nav-dropdown__dropdown-item">F.A.Q.</a>
+                            <a href="#" class="nav-dropdown__dropdown-item">Payment</a>
+                            <a href="#" class="nav-dropdown__dropdown-item">Delivery</a>
+                        </div>
+                        </div>
+                    <!--// dropdown nav --> 
+
+                    </div>
+                        <!-- // ITEM -->
+                        <!-- ITEM 2 -->
+                    <div class="header-nav__select-item">
+                        <!-- dropdown nav -->
+
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown__title">
+                                USD
+                            
+                            
+                                <div class="nav-dropdown__title-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5"><path fill="#b3b3b3" d="M3.998 5L8 2.5V.104L3.998 2.62 0 0v2.5z"/></svg>  
+                                </div>
+                            </a>
+                            <div class="nav-dropdown__dropdown">
+                                <a href="#" class="nav-dropdown__dropdown-item">USD</a>
+                                <a href="#" class="nav-dropdown__dropdown-item">RUR</a>
+                                <a href="#" class="nav-dropdown__dropdown-item">UAH</a>
+                            </div>
+                            </div>
+                        <!--// dropdown nav --> 
+                    </div>
+                        <!-- // ITEM -->
+                        <!-- ITEM -->
+                    <div class="header-nav__select-item">
+                        <!-- dropdown nav -->
+
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown__title">
+                                Language
+                            
+                            
+                                <div class="nav-dropdown__title-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5"><path fill="#b3b3b3" d="M3.998 5L8 2.5V.104L3.998 2.62 0 0v2.5z"/></svg>  
+                                </div>
+                            </a>
+                            <div class="nav-dropdown__dropdown">
+                                <a href="#" class="nav-dropdown__dropdown-item">English</a>
+                                <a href="#" class="nav-dropdown__dropdown-item">Russian</a>
+                            </div>
+                            </div>
+                        <!--// dropdown nav --> 
+                    </div>
+                        <!-- // ITEM -->
+                </div>
+                <!--// header-nav__select-->
+            </nav>
+
+        </div>
+    </header>
+
+    
+
+    <section class="carousel-section">
+        <div class="container">
+            <!-- Обертка для карусели -->
+            <div class="carousel owl-carousel owl-theme" id="carousel-header">
+                <!-- Слайд 1-->
+                <div class="carousel__item">
+                    <h2 class="carousel__item-title">The Universe Through A Child S Eyes</h2>
+                    <div class="carousel__item-text">
+                        <p>Start sales</p>
+                    </div>
+                    
+                </div>
+                 <!-- // Слайд 1-->
+
+                  <!-- Слайд 2-->
+                <div class="carousel__item">
+                    <h2 class="carousel__item-title">The Universe Through A Child S Eyes</h2>
+                    <div class="carousel__item-text">
+                        <p>Start sales</p>
+                    </div>
+                    
+                </div>
+                 <!-- // Слайд 2-->
+
+                  <!-- Слайд 3-->
+                <div class="carousel__item">
+                    <h2 class="carousel__item-title">The Universe Through A Child S Eyes</h2>
+                    <div class="carousel__item-text">
+                        <p>Start sales</p>
+                    </div>
+                    
+                </div>
+                 <!-- // Слайд 3-->
+                 
+            </div>     
+              <!--// Обертка для карусели -->
+        </div>
+    </section>
+
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-section__row">
+                <div class="promo-section__col">
+                    <!-- Item -->
+                    <a href="#" class="promo-section-item-link-wrapper">
+                        <div class="promo-section-item">
+                            <h4 class="promo-section-item__title">Astronomy Or Astrology</h4>
+                            <div class="promo-section-item__subtitle">Start sales</div>
+                            <img class="promo-section-item__img" src="./img/promo/headphones.jpg" alt="Headphones">
+                        </div>
+                    </a>
+                </div>
+                 <!-- // Item -->
+
+                <!-- Item -->
+                <div class="promo-section__col">
+                    <a href="#" class="promo-section-item-link-wrapper">
+                        <div class="promo-section-item promo-section-item--background-img promo-section-item--background-img-watch" >
+                            <h4 class="promo-section-item__title">The Basics Of Buying A Telescope</h4>
+                            <div class="promo-section-item__subtitle">Astronomy Or Astrology</div>
+                        </div>
+                    </a>
+                </div>
+                <!-- // Item -->
+
+                 <!-- Item small_1-->
+
+                 <div class="promo-section__col">
+                    <a href="#" class="promo-section-item-link-wrapper promo-section-item-link-wrapper--column">
+                        <div class="promo-section-item promo-section-item--small">
+                            <div class="promo-section-item__img-cell">
+                                <img src="./img/promo/pencil.jpg" alt="Pencil">
+                            </div>
+                            <div class="promo-section-item__title-cell">
+                                <h4 class="promo-section-item__title">Getting Free Publicity 
+                                    For Your Business</h4>
+                            </div> 
+                        </div>
+                    </a>
+
+                    <!-- Item small_2-->
+
+                    <a href="#" class="promo-section-item-link-wrapper promo-section-item-link-wrapper--column">
+                        <div class="promo-section-item promo-section-item--small">
+                            <div class="promo-section-item__img-cell">
+                                <img src="./img/promo/watch-classic.jpg" alt="Pencil">
+                            </div>
+                            <div class="promo-section-item__title-cell">
+                                <h4 class="promo-section-item__title">How Plasma Tvs And  Lcd Tvs Differ</h4>
+                            </div> 
+                        </div>
+                    </a>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+    </section>
+
+
+    <main class="main-content">
+        <div class="container">
+            <div class="main__row">
+
+                <!-- main column-left -->
+                <div class="main__column-left">
+
+                    <!-- Navigation -->
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><defs><style></style></defs><path id="desctop_icon" data-name="desctop icon" class="cls-1" d="M570,2704H552v-12h18v12Zm0-14H552a2.006,2.006,0,0,0-2,2v12a2.006,2.006,0,0,0,2,2h7v2h-2v2h8v-2h-2v-2h7a2.005,2.005,0,0,0,2-2v-12A2.005,2.005,0,0,0,570,2690Z" transform="translate(-550 -2690)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Computers
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="imac_icon" data-name="imac icon" class="cls-1" d="M570,2762H552v-10h18v10Zm0-12H552a2.006,2.006,0,0,0-2,2v12a2.006,2.006,0,0,0,2,2h7l-2,3v1h8v-1l-2-3h7a2.005,2.005,0,0,0,2-2v-12A2.005,2.005,0,0,0,570,2750Z" transform="translate(-550 -2750)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Apple Computers
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="laptop_icon" data-name="laptop icon" class="cls-1" d="M554,2815h16v10H554v-10Zm16,12a2,2,0,0,0,1.989-2l0.01-10a2.005,2.005,0,0,0-2-2H554a2.007,2.007,0,0,0-2,2v10a2.007,2.007,0,0,0,2,2h-4v2h24v-2h-4Z" transform="translate(-550 -2813)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Laptops
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="keyboard_icon" data-name="keyboard icon" class="cls-1" d="M568,2877h-2v-2h2v2Zm0,3h-2v-2h2v2Zm-3-3h-2v-2h2v2Zm0,3h-2v-2h2v2Zm0,4h-8v-2h8v2Zm-9-7h-2v-2h2v2Zm0,3h-2v-2h2v2Zm1-2h2v2h-2v-2Zm0-3h2v2h-2v-2Zm3,3h2v2h-2v-2Zm0-3h2v2h-2v-2Zm9-3H553a2,2,0,0,0-1.989,2L551,2884a2,2,0,0,0,2,2h16a2.005,2.005,0,0,0,2-2v-10A2.005,2.005,0,0,0,569,2872Z" transform="translate(-551 -2872)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Friends
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="memory_icon" data-name="memory icon" class="cls-1" d="M565,2943H555v-10h10v10Zm4-6v-2h-2v-2a2.005,2.005,0,0,0-2-2h-2v-2h-2v2h-2v-2h-2v2h-2a2.007,2.007,0,0,0-2,2v2h-2v2h2v2h-2v2h2v2a2.007,2.007,0,0,0,2,2h2v2h2v-2h2v2h2v-2h2a2.005,2.005,0,0,0,2-2v-2h2v-2h-2v-2h2Zm-8,2h-2v-2h2v2Zm2-4h-6v6h6v-6Z" transform="translate(-551 -2929)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Computer components
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="20" viewBox="0 0 14 20"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="speaker_icon" data-name="speaker icon" class="cls-1" d="M560,2998a3,3,0,1,0,3,3A3,3,0,0,0,560,2998Zm0,8a5,5,0,1,1,5-5A5,5,0,0,1,560,3006Zm0-16a2,2,0,1,1-2,2A2.006,2.006,0,0,1,560,2990Zm5-2H555a2.007,2.007,0,0,0-2,2v16a2,2,0,0,0,2,1.99l10,0.01a2.005,2.005,0,0,0,2-2v-16A2.005,2.005,0,0,0,565,2988Z" transform="translate(-553 -2988)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Accessories
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="phone_icon" data-name="phone icon" class="cls-1" d="M565,3066h-9v-14h9v14Zm-4.5,4a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,560.5,3070Zm4-21h-8a2.5,2.5,0,0,0-2.5,2.5v17a2.5,2.5,0,0,0,2.5,2.5h8a2.5,2.5,0,0,0,2.5-2.5v-17A2.5,2.5,0,0,0,564.5,3049Z" transform="translate(-554 -3049)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Cell Phones
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="tv_icon" data-name="tv icon" class="cls-1" d="M570,3125H552v-12h18v12Zm0-14H552a2.006,2.006,0,0,0-2,2v12a2.006,2.006,0,0,0,2,2h5v2h8v-2h5a2,2,0,0,0,1.989-2l0.01-12A2.005,2.005,0,0,0,570,3111Z" transform="translate(-550 -3111)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    TV & Video
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="game_icon" data-name="game icon" class="cls-1" d="M568.5,3179a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,568.5,3179Zm-4,3a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,564.5,3182Zm-4.5-2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2Zm10-7H552a2.006,2.006,0,0,0-2,2v8a2.006,2.006,0,0,0,2,2h18a2.005,2.005,0,0,0,2-2v-8A2.005,2.005,0,0,0,570,3173Z" transform="translate(-550 -3173)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Game consoles
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>
+                            <li class="navigation__item">
+                                <div class="navigation__item-icon">
+                                    <svg class="navigation__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 16 24"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="watch_icon" data-name="watch icon" class="cls-1" d="M555,3238a6,6,0,1,1,6,6A6,6,0,0,1,555,3238Zm14,0a7.974,7.974,0,0,0-3.041-6.27L565,3226h-8l-0.95,5.73a7.968,7.968,0,0,0,0,12.54L557,3250h8l0.959-5.73A7.974,7.974,0,0,0,569,3238Z" transform="translate(-553 -3226)"/></svg>
+                                </div>
+                                <div class="navigation__item-title">
+                                    Watches
+                                </div>
+                                <div class="navigation__item-arrow">
+                                    <svg class="navigation__icon-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"><defs><style>.cls-1 {fill-rule: evenodd;}</style></defs><path id="arrow_icon" data-name="arrow icon" class="cls-1" d="M768,2699l-3-5h-2.875l3.018,5L762,2704h3Z" transform="translate(-762 -2694)"/></svg>
+                                </div>
+                            </li>                          
+                        </ul>
+                    </nav>
+                    <!-- // Navigation -->
+
+                    <!-- banner -->
+                    <aside class="info-block">
+                        <div class="info-block__title">Look Up In The Sky</div>
+                        <div class="info-block__subtitle">Astronomy Or Astrology</div>   
+                    </aside>
+                    <!--// banner -->
+                    
+                </div>
+                <!-- //main column-left -->
+
+                <!-- main column-Right -->
+                <div class="main__column-right">
+                    
+                    <!-- tabs plate -->
+                    <div class="tabs">
+                        <button class="tabs__btn tabs__btn--active">Most Popular</button>
+                        <button class="tabs__btn">My comunities</button>
+                    </div>
+                    <!-- //tabs plate -->
+
+
+                    <!-- cards-wrapper -->
+                    <div class="cards-wrapper">
+                        
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                     </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                        </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                     </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                        </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                        </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+                        <!-- card -->
+                        <div class="card">
+                            <!-- card-header -->
+                            <div class="card__header">
+
+                                <div class="card__sale">SALE 10%</div>
+
+                                <div class="card__icon-btns">
+                                
+                                <button class="card__icon-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+                                        <path id="list_icon" data-name="list icon" class="cls-1" d="M990,2792h2v-2h-2v2h0Zm0,4h2v-2h-2v2h0Zm0-8h2v-2h-2v2h0Zm4,4h14v-2H994v2h0Zm0,4h14v-2H994v2h0Zm0-10v2h14v-2H994Z" transform="translate(-990 -2786)"/>
+                                    </svg>
+                                </button>
+
+                                <button class="card__icon-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"><path d="M10.1 15.55l-.1.1-.1-.1C5.14 11.24 2 8.39 2 5.5 2 3.5 3.5 2 5.5 2c1.54 0 3.038.99 3.569 2.36h1.871C11.46 2.99 12.96 2 14.5 2c2.002 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.898 10.05zM14.5 0c-1.74 0-3.41.81-4.5 2.09C8.912.81 7.24 0 5.5 0 2.42 0 0 2.42 0 5.5c0 3.78 3.4 6.86 8.55 11.54L10 18.35l1.451-1.32C16.6 12.36 20 9.28 20 5.5 20 2.42 17.58 0 14.5 0z"/></svg>
+                                </button>
+                                
+                                </div>
+                            </div>
+                            <!-- //card-header -->
+
+
+                            <div class="card__img">
+                                <img src="./img/products/iphone.jpg" alt="Asus ZenFone Go ZB452KG (black and white)">
+                            </div>
+                            <h4 class="card__title">
+                                Asus ZenFone Go ZB452KG (black and white)
+                            </h4>
+                            <div class="card__rating">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star_icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star half icon.svg" alt="">
+                                <img class="card__rating-star" src="./img/icons-rating/star border icon.svg" alt="">
+                                <div class="card__rating-value">12</div>
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__price">$ 384.4</div>
+                                <button class="card__cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="cart_icon" data-name="cart icon" class="cls-1" d="M974,3136a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Zm-6-16v2h2l3.6,7.59-1.351,2.45a1.933,1.933,0,0,0-.249.96,2.006,2.006,0,0,0,2,2h12v-2H974.42a0.247,0.247,0,0,1-.25-0.25l0.029-.12,0.9-1.63h7.45a1.987,1.987,0,0,0,1.75-1.03l3.579-6.49A0.966,0.966,0,0,0,988,3123a1,1,0,0,0-1-1H972.209l-0.939-2H968Zm16,16a2,2,0,1,0,2,2,2,2,0,0,0-2-2h0Z" transform="translate(-968 -3120)"/>
+                                        </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- // card -->
+
+                    </div>
+
+                    <!-- // cards-wrapper -->
+
+                </div>
+                <!-- //main column-Right -->
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer-top-wrapper">
+            <div class="container">
+                <!-- footer__row -->
+                <div class="footer__row">
+                    <div class="footer__logo">
+                        <div class="logo">
+                            QUANTUM
+                        </div>
+                    </div>
+                    <div class="footer__nav">
+                        <nav class="footer-nav">
+                            <ul class="footer-nav__list">
+                                <li class="footer-nav__list-item">
+                                    <a class="footer-nav__link footer-nav__link--dropdown" href="#">
+                                        Shop
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5">
+                                                <path d="M3.998 5L8 2.5V.104L3.998 2.62 0 0v2.5z"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="footer-nav__list-item">
+                                    <a class="footer-nav__link" href="#">Journal</a>
+                                </li>
+                                <li class="footer-nav__list-item">
+                                    <a class="footer-nav__link" href="#">About</a>
+                                </li>
+                                <li class="footer-nav__list-item">
+                                    <a class="footer-nav__link" href="#">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="social">
+                            <a href="" class="social__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15">
+                                  <path id="facebook_icon" data-name="facebook icon" class="cls-1" d="M1405.19,3723.99v-6.83h2.35l0.36-2.67h-2.71v-1.7a1.12,1.12,0,0,1,1.35-1.3h1.45v-2.38a20.061,20.061,0,0,0-2.11-.11,3.26,3.26,0,0,0-3.52,3.53v1.96H1400v2.67h2.36v6.83h2.83Z" transform="translate(-1400 -3709)"/>
+                                </svg>
+                            </a>
+                            <a href="" class="social__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11.75" viewBox="0 0 14 11.75">
+                                    <path id="twitter_icon" data-name="twitter icon" class="cls-1" d="M1462,3711.53a5.57,5.57,0,0,1-1.65.47,3.017,3.017,0,0,0,1.27-1.64,5.779,5.779,0,0,1-1.83.72,2.821,2.821,0,0,0-2.1-.94,2.872,2.872,0,0,0-2.04.88,2.957,2.957,0,0,0-.83,2.09,3.078,3.078,0,0,0,.07.68,8.1,8.1,0,0,1-5.92-3.1,3.037,3.037,0,0,0,.89,3.96,2.864,2.864,0,0,1-1.3-.37v0.04a2.95,2.95,0,0,0,2.31,2.91,3.007,3.007,0,0,1-1.3.05,2.9,2.9,0,0,0,2.68,2.06,5.659,5.659,0,0,1-3.56,1.27,0.914,0.914,0,0,1-.69-0.04,7.951,7.951,0,0,0,4.4,1.33,8.089,8.089,0,0,0,5.82-2.48,8.414,8.414,0,0,0,2.35-5.96c0-.13,0-0.26-0.01-0.39A5.711,5.711,0,0,0,1462,3711.53Z" transform="translate(-1448 -3710.16)"/>
+                                  </svg>
+                            </a>
+                            <a href="" class="social__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path id="instagram_icon" data-name="instagram icon" class="cls-1" d="M1505.01,3710h-6.08a2.675,2.675,0,0,0-2.93,2.93v6.08a3.083,3.083,0,0,0,.83,2.22,3.137,3.137,0,0,0,2.15.77h6.03a3.057,3.057,0,0,0,2.16-.77,2.862,2.862,0,0,0,.83-2.16v-6.08a3.145,3.145,0,0,0-.77-2.16A3,3,0,0,0,1505.01,3710Zm4.99,9.31a4.762,4.762,0,0,1-1.33,3.43,4.7,4.7,0,0,1-3.38,1.26h-6.58a4.7,4.7,0,0,1-3.38-1.26,4.528,4.528,0,0,1-1.33-3.43v-6.62a4.456,4.456,0,0,1,4.71-4.69h6.64a4.644,4.644,0,0,1,3.38,1.32,4.579,4.579,0,0,1,1.27,3.37v6.62Zm-8-1.31a2,2,0,1,0-2-2A2,2,0,0,0,1502,3718Zm-0.03,2a4,4,0,0,1,0-8A4,4,0,1,1,1501.97,3720Zm4.03-7a1,1,0,1,1,1-1A0.99,0.99,0,0,1,1506,3713Z" transform="translate(-1494 -3708)"/>
+                                  </svg>
+                            </a>
+                            <a href="" class="social__item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                                    <path id="youtube_icon" data-name="youtube icon" class="cls-1" d="M1556,3716l-6-3.27v6.53Zm4,4a2.006,2.006,0,0,1-2,2h-12a2.006,2.006,0,0,1-2-2v-8a2.006,2.006,0,0,1,2-2h12a2.006,2.006,0,0,1,2,2v8Z" transform="translate(-1544 -3710)"/>
+                                  </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- //footer__row -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer__row footer__row--copyright">
+                <div class="footer__copyright">
+                    <div class="copyright">
+                        <div class="copyright__item">© 2016. Quantum UI kit</div>
+                        <div class="copyright__item"><a href="#"> Privacy Policy</a></div>
+                        <div class="copyright__item"><a href="#">Terms of Use</a></div>
+                    </div>
+                </div>
+                <div class="footer__payments">
+                    <div class="payments">
+                        <div class="payments__text">Accepted payment methods</div>
+                        <div class="payments__icons">
+                            <div class="payments__icon">
+                                <img src="./img/payment-icons/visa-icon.png" alt="VISA">
+                            </div>
+                            <div class="payments__icon">
+                                <img src="/img/payment-icons/master-card-icon.png" alt="MASTERCARD">
+                            </div>
+                            <div class="payments__icon">
+                                <img src="/img/payment-icons/pay-pal-icon.png" alt="PAYPAL">
+                            </div>
+                            <div class="payments__icon">
+                                <img src="/img/payment-icons/amazon-icon.png" alt="AMAZON">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="./libs/jquery/jquery-3.3.1.min.js"></script>
+    <!--OwlCarousel  -->
+    <script src="./libs/owl-carousel/owl.carousel.min.js"></script>
+    
+    
+    
+    <script src="js/header-select.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="15" viewBox="0 0 8 15">
+    <style>
+      .cls-1 {
+        fill: #666;
+        fill-rule: evenodd;
+      }
+    </style>
+  <path id="facebook_icon" data-name="facebook icon" class="cls-1" d="M1405.19,3723.99v-6.83h2.35l0.36-2.67h-2.71v-1.7a1.12,1.12,0,0,1,1.35-1.3h1.45v-2.38a20.061,20.061,0,0,0-2.11-.11,3.26,3.26,0,0,0-3.52,3.53v1.96H1400v2.67h2.36v6.83h2.83Z" transform="translate(-1400 -3709)"/>
+</svg>
